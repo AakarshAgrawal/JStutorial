@@ -47,3 +47,78 @@ let part2 = arr.splice(1,3); // Adds, removes, or replaces elements in the origi
              // takes input: starting index from where to start removing and count how many elements to remove.
              // splice modifies the original array
 console.log(part2);
+
+
+
+//reverse
+let arr4 = [1, 2, 3, 4, 5];
+arr4.reverse(); // Reverses the order of the elements in the array
+// Output: [5, 4, 3, 2, 1];
+
+
+
+//sort
+let arr5 = [5, 3, 8, 1, 2];
+let sortedArr = arr5.sort(function(a, b){
+    return a - b; // Sorts the array in ascending order, b - a for descending order.
+});
+// Output: [1, 2, 3, 5, 8]
+
+
+
+//forEach: it executes a provided function once for each array element.
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(num) {
+    console.log(num+5); 
+}); // Output: 6 7 8 9 10
+
+
+
+//map: Creates a new array by applying a given function to each element of the original array.
+//     It does not modify the original array.
+let newarr = numbers.map(function(num) {
+    return num * 2; 
+});
+console.log(newarr); // Output: [2, 4, 6, 8, 10]
+
+
+//filter: Creates a new array with all elements that pass the test implemented by the provided function.
+let filteredArr = numbers.filter(function(num) {
+    return num > 2; 
+});
+console.log(filteredArr); // Output: [3, 4, 5]
+
+
+
+//reduce: is another powerful array method, often used to accumulate values into a single result.
+// What reduce() Does
+// Processes each element of an array from left to right.
+// Carries forward an accumulator (a running total or result) across iterations.
+// Returns a single value (number, string, object, array, etc.).
+// Does not modify the original array.
+
+let ans = numbers.reduce(function(accumulator, currentValue ) {
+    return accumulator + currentValue; // Sums up all the elements in the array
+}, 0 ); // Initial value of accumulator is set to 0
+console.log(ans); // Output: 15
+
+
+// find: Returns the first element in the array that satisfies the provided testing function.
+let found = numbers.find(function(num) {
+    return num > 3; 
+});
+console.log(found); // Output: 4 (the first number greater than 3)
+
+
+//some: Tests whether at least one element in the array passes the test implemented by the provided function.
+let ans = numbers.some(function(num) {
+    return num > 3; 
+});
+console.log(ans); // Output: true (because 4 and 5 are greater than 3)
+
+
+//every: Tests whether all elements in the array pass the test implemented by the provided function.
+let allGreaterThanZero = numbers.every(function(num) {
+    return num > 0; 
+});
+console.log(allGreaterThanZero); // Output: true (because all numbers are greater than 0)
