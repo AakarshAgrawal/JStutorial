@@ -5,6 +5,8 @@
 
 
 // to make a function an IIFE, we wrap it in parentheses and then call it with another set of parentheses.
+// note always remember to end the IIFE with a semicolon(;) to avoid execution errors. 
+
 
 (function() {
     console.log("This is an IIFe");
@@ -31,3 +33,5 @@
     console.log("this is a named IIFE");
 })();
 // Output: this is a named IIFE
+
+
