@@ -94,7 +94,7 @@ showThisStrict(); // undefined
 //note  5.3. this Inside an Object Method
 // When a function is called as a method of an object, `this` refers to that object.
     const obj = {
-        name: "Aakarsh"
+        name: "Aakarsh",
         greet: function() {
             console.log("Hello, " + this.name); 
         }
