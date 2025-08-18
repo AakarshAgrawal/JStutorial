@@ -97,7 +97,7 @@ console.log(filteredArr); // Output: [3, 4, 5]
 // Returns a single value (number, string, object, array, etc.).
 // Does not modify the original array.
 
-let ans = numbers.reduce(function(accumulator, currentValue ) {
+let sum = numbers.reduce(function(accumulator, currentValue ) {
     return accumulator + currentValue; // Sums up all the elements in the array
 }, 0 ); // Initial value of accumulator is set to 0
 console.log(ans); // Output: 15
