@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(32, 2, 60); color: ivory">
+    <ul class="language">
+        <li>
+            JavaScript
+        </li>
+    </ul>
+</body>
+<script>
+    // This function adds a new language to the list
+    // It creates a new list item and appends it to the existing list
+    // The function takes a language name as an argument
+    // and uses template literals to set the inner HTML of the list item
+    // Finally, it appends the new list item to the unordered list with class 'language 
+      function addLanguage (LangName){
+        const li = document.createElement('li');
+        li.innerHTML = `${LangName}`;
+        document.querySelector('.language').appendChild(li);
+      }
+        addLanguage('Python');
+        addLanguage('Java');
+        addLanguage('C++');
+
+        // more optimized way 
+        function addLanguageopti (LangName){
+            const li = document.createElement('li');
+            li.appendChild( document.createTextNode(LangName));
+            document.querySelector('.language').appendChild(li);
+        }
+        addLanguageopti('C#')
+        addLanguageopti('PHP');
+
+// EDIT :
+        const secondli = document.querySelector('.language li:nth-child(2)');
+        secondli.innerHTML = "JavaScript";
+
+
+// more optimized way to edit the second list item
+        const newli = document.createElement('li');
+        newli.textContent = "Mojo";
+        secondli.replaceWith(newli);
+
+        // REMOVE :
+        const lastlang = document.querySelector('.language li:last-child');
+        lastlang.remove();
+
+</script>
+</html>
