@@ -32,7 +32,11 @@ do {
   number++;
 }while (number < 5); // Executes at least once      
 
-5 // For...of Loop
+
+
+
+5 // For...of Loop  : // Used to iterate over iterable objects like arrays, strings, etc.
+// It provides a simpler syntax for iterating through elements without needing an index.
 const array = ['apple', 'banana', 'cherry'];
 for (const fruit of array) {
   console.log("Fruit:", fruit);
@@ -40,7 +44,9 @@ for (const fruit of array) {
 // OUTPUT: Fruit: apple, Fruit: banana, Fruit: cherry   
 
 
-6. // For...in Loop
+6. // For...in Loop : // Used to iterate over the properties of an object.
+// It allows you to access each key in the object and its corresponding value.
+// Note: It is generally used for objects, not arrays.
 const person = { name: 'Alice', age: 30, city: 'New York' };
 for (const key in person) {
   console.log(`Key: ${key}, Value: ${person[key]}`);
@@ -48,7 +54,9 @@ for (const key in person) {
 // OUTPUT: Key: name, Value: Alice; Key: age, Value: 30
 
 
-7. // For each Loop
+7. // For each Loop :   // A method available on arrays that executes a provided function once for each array element.
+// It is not a traditional loop but a method that simplifies iteration over arrays.
+// It takes a callback function that receives the current element, index, and the array itself as
 const numbers = [1, 2, 3, 4, 5];
 numbers.forEach((num, index) => {
   console.log(`Index: ${index}, Number: ${num}`);
