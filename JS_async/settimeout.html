@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Aakarsh is learning JS
+    </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   /*// 'setTimeout()'
+✅ Definition:
+setTimeout() schedules a function to run once after a specified amount of time (in milliseconds).
+It returns a timeout ID, which you can use to cancel the timeout.
+
+✅ Syntax:
+let timeoutId = setTimeout(function, delay, param1, param2, ...); */
+
+//document.querySelector('h1').innerHTML = "Aakarsh has lernt JS" ;  // this will immediately change The H1;
+
+//if we want this to chaged after say 3 seconds,
+ const changeh1 = function(){
+    document.querySelector('h1').innerHTML = "Aakarsh has lernt JS" 
+ }
+const setid = setTimeout (changeh1,3000) // this will change the h1 after 3 seconds
+  
+clearTimeout() //Cancels a timeout that was set with setTimeout().
+// Requires the timeout ID returned by setTimeout()
+
+document.querySelector('#stop').addEventListener('click', function(e){
+    clearTimeout(setid); // it stops the set timeout function when the stop button is pressed
+})
+
+</script>
+</html>

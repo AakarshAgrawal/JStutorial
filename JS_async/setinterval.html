@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>
+        Aakarsh is learning JS
+    </h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+ /* 
+ 'setInterval()' ✅ Definition:
+Executes a function repeatedly at fixed intervals (in milliseconds).
+Keeps running until you stop it with clearInterval().
+Returns an interval ID.
+
+syntax:
+let intervalId = setInterval(function, delay, param1, param2, ...);
+    
+ */
+const sayname = function(){
+        console.log("Aakarsh");
+    }
+    let setid; 
+document.querySelector('#start').addEventListener('click', function(e){
+  setid = setInterval(sayname, 1000);
+})
+
+document.querySelector('#stop').addEventListener('click', function(e){
+    clearInterval(setid);
+})
+</script>
+</html>
