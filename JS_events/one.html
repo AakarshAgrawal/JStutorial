@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events     </title>
+</head>
+<body>
+    <h2>Amazing images   </h2>
+    <div>   
+        <ul>
+            <li><img id="baloon"  src="https://www.w3schools.com/js/pic_bulbon.gif" alt="Light Off" id="myImage" onclick="changeImage()" style="width:100px"></li>
+    </ul>
+    </div>
+</body>
+<script>
+    document.getElementById("baloon").addEventListener('click', function(e){
+     alert("clicked on baloon")
+    })
+</script>
+</html>
